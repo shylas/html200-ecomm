@@ -49,8 +49,13 @@ var products = [
   }
 ];
 
-for (var key in products) {
-    console.log(products[key].name);
-    console.log(products[key].description);
-    console.log(products[key].price);
+for (var i = 0; i<products.length; i++) {
+    console.log(products[i].name);
+    console.log(products[i].description);
+    console.log(products[i].price);
     }
+
+function capture(){
+  console.log(document.filterBy.filter.value);
+  event.preventDefault();
+}
