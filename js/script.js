@@ -59,3 +59,15 @@ function capture(){
   console.log(document.filterBy.filter.value);
   event.preventDefault();
 }
+// TODO Trigger on chnage of cart contents
+function sumPrices(cartArray){
+  // for loop through array, sum value of price attrib for each object
+  
+  var total = 0;
+  
+  for(var i=0; i<cartArray.length; i++){
+    total = total + cartArray[i].price;
+  }
+  // TODO print total as html to page next to cart icon
+  console.log(total);
+}
