@@ -59,14 +59,14 @@ form{
   
 }
 
-@media only screen and (max-width: 630px) {
+@media (max-width: 630px) {
   .item{
     max-width: 97%;
     padding: 3%;
   }
 }
 
-@media only screen and (max-width: 330px){
+@media (max-width: 330px){
   nav a{
     width: 100%;
   }
