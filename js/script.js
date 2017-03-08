@@ -1,3 +1,5 @@
+var cart = [ ];
+
 var products = [
   {
     "name": "Reversible Plaid",
@@ -70,4 +72,52 @@ function sumPrices(cartArray){
   }
   // TODO print total as html to page next to cart icon
   console.log(total);
+}
+
+function addItem(item) {
+  var ProductIndex = cart.indexOf(item);
+  if (ProductIndex <= 0) {
+    cart.push(item);
+  }
+  console.log(cart);
+}
+
+function removeItem(item) {
+  var ProductIndex = cart.indexOf(item);
+  if (ProductIndex != -1) {
+    cart.splice(ProductIndex, 1);
+  }
+  console.log(cart);
+}
+
+function filterItems() {
+  var sortMethod = document.filterBy.filter.value;
+  if(sortMethod == "name") {
+    sortName();
+  }
+  
+  else if (sortMethod == "price") {
+     { 
+      sortPrice();
+  } 
+}
+  event.preventDefault();
+}
+
+function sortName(){
+  products.sort(function(a,b){
+    if(a.name.toLowerCase() < b.name.toLowerCase())
+      return -1;
+    if(a.name.toLowerCase() > b.name.toLowerCase())
+      return 1;
+    return 0;
+  });
+  console.log(products);
+}
+
+function sortPrice(){
+  products.sort(function(a,b){
+    return a.price - b.price;
+});
+  console.log(products);
 }
