@@ -70,7 +70,8 @@ form{
 @media only screen and (max-width: 526px) {
   .item{
     max-width: 97%;
-    padding: 3%;
+    padding: 2%;
+    margin: 1%;
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
@@ -82,6 +83,9 @@ form{
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     justify-content: center;
+    border: darkslategray;
+    border-style: solid;
+    border-width: thin;
   }
 }
 

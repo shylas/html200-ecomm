@@ -75,17 +75,15 @@ function sumPrices(cartArray){
 }
 
 function addItem(item) {
-  var ProductIndex = cart.indexOf(item);
-  if (ProductIndex <= 0) {
-    cart.push(item);
-  }
+  var itemIndex = cart.indexOf(item);
+  cart.push(item);
   console.log(cart);
 }
 
 function removeItem(item) {
-  var ProductIndex = cart.indexOf(item);
-  if (ProductIndex != -1) {
-    cart.splice(ProductIndex, 1);
+  var itemIndex = cart.indexOf(item);
+  if (itemIndex != -1) {
+    cart.splice(itemIndex, 1);
   }
   console.log(cart);
 }
