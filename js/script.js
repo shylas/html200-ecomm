@@ -77,7 +77,9 @@ function sumPrices(cartArray){
 function addItem(item) {
   var itemIndex = cart.indexOf(item);
   cart.push(item);
-  console.log(cart);
+  //console.log(cart);
+  var total = document.getElementById("item-total");
+    total.innerHTML = cart.length;
 }
 
 function removeItem(item) {
@@ -85,7 +87,9 @@ function removeItem(item) {
   if (itemIndex != -1) {
     cart.splice(itemIndex, 1);
   }
-  console.log(cart);
+  //console.log(cart);
+  var total = document.getElementById("item-total");
+      total.innerHTML = cart.length; 
 }
 
 function filterItems() {
@@ -119,3 +123,4 @@ function sortPrice(){
 });
   console.log(products);
 }
+
